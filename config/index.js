@@ -12,4 +12,4 @@ export const DIGITALOCEAN_ENDPOINT = "https://nyc3.digitaloceanspaces.com";
 export const DIGITALOCEAN_API_KEY = "DO00HFNWVPYJBRTBVZZJ";
 export const DIGITALOCEAN_SECRET_ACCESS_KEY =
   "VTaTd4LASdw+OjDylmiBOPa4GOD956R/25597C7ULX8";
-export const DIGITALOCEAN_FOLDER = "trip-law";
+export const DIGITALOCEAN_FOLDER = "tampa-motion";
