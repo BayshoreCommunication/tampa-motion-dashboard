@@ -8,7 +8,7 @@
     width: 0px;
   }
 
-  /* firefox */
+  /* firefox*/
   @supports (scrollbar-color: grey transparent) {
     .sidebar {
       scrollbar-width: none;
@@ -21,7 +21,7 @@
 }
 
 .tiptap-toolbar button {
-  @apply hover:bg-gray-200  px-1 min-w-[30px] h-[28px] flex justify-center items-center rounded disabled:opacity-50 disabled:hover:!bg-transparent;
+  @apply hover:bg-gray-200  px-1 min-w-[30px] h-[28px] flex   justify-center items-center rounded disabled:opacity-50 disabled:hover:!bg-transparent;
 }
 
 .tiptap-toolbar .is-active {
@@ -106,14 +106,4 @@
 
 .ProseMirror hr {
   @apply my-8 border-t border-gray-400;
-}
-
-[data-youtube-video] {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-[data-youtube-video] iframe {
-  max-width: 100%;
 }

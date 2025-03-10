@@ -1,12 +1,7 @@
 "use client";
 import { IconCloudArrow } from "@/components/Icons";
 import { Spinner } from "@/components/Loading/Spinner";
-import {
-  DIGITALOCEAN_API_KEY,
-  DIGITALOCEAN_ENDPOINT,
-  DIGITALOCEAN_FOLDER,
-  DIGITALOCEAN_SECRET_ACCESS_KEY,
-} from "@/config";
+import { DIGITALOCEAN_API_KEY, DIGITALOCEAN_ENDPOINT, DIGITALOCEAN_FOLDER, DIGITALOCEAN_SECRET_ACCESS_KEY } from "@/config";
 import useTheme from "@/hooks/useTheme";
 import AWS from "aws-sdk";
 import Image from "next/image";
@@ -25,10 +20,11 @@ function ImageUploadField({
   handleImageSubmit,
   imageSubmitting,
 }) {
+  
   const s3 = new AWS.S3({
-    endpoint: DIGITALOCEAN_ENDPOINT,
-    accessKeyId: DIGITALOCEAN_API_KEY,
-    secretAccessKey: DIGITALOCEAN_SECRET_ACCESS_KEY,
+    endpoint: DIGITALOCEAN_ENDPOINT, 
+    accessKeyId: DIGITALOCEAN_API_KEY, 
+    secretAccessKey: DIGITALOCEAN_SECRET_ACCESS_KEY, 
   });
 
   const theme = useTheme();
@@ -39,7 +35,7 @@ function ImageUploadField({
   const [imageUrl, setImageUrl] = useState(null);
   const [imageId, setImageId] = useState(null);
 
-  const imageMaxSize = 500;
+  const imageMaxSize = 500; 
 
   const handleImageUpload = useCallback(async () => {
     if (!image) return;
@@ -51,16 +47,14 @@ function ImageUploadField({
     }
 
     // Generate a unique filename
-    const uniqueFileName = `${DIGITALOCEAN_FOLDER}/${Date.now()}-${uuidv4()}-${encodeURIComponent(
-      image.name
-    )}`;
+    const uniqueFileName = `${DIGITALOCEAN_FOLDER}/${Date.now()}-${uuidv4()}-${encodeURIComponent(image.name)}`;
 
     // Set upload parameters
     const params = {
-      Bucket: "bayshore",
+      Bucket: "bayshore", 
       Key: uniqueFileName,
       Body: image,
-      ACL: "public-read",
+      ACL: "public-read", 
       ContentType: image.type,
     };
 

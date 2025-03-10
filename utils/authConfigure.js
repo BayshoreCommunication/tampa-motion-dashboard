@@ -8,6 +8,8 @@ const googleClient = new google.auth.OAuth2(
   process.env.REDIRECT_URI
 );
 
+// test 
+
 export async function authConfigure(token) {
   // const url = "https://bayshore-backend.vercel.app/user/token";
   const url = `${API_URL}/user/token`;
